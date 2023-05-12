@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Food Waste Reduction Tracker</h1>
+  
+  <div class="awareness-section">
+    <h2>Yearly global food waste: 2.5 Billion tons</h2>
+  </div>
+  
+  <div class="best-practices-section">
+    <h3>What you can do?</h3>
+    <ul>
+      <li>Plan meals in advance to avoid overbuying</li>
+      <li>Properly store and preserve food items</li>
+      <li>Regularly check expiration dates and consume items before they spoil</li>
+      <li>Donate excess food to local charities or food banks</li>
+      <li>Compost food scraps</li>
+    </ul>
+  </div>
+  
+  <div class="start-section">
+    <h2>Start Controlling Your Food Wastage</h2>
+    <p>Are you ready to reduce your food waste? Start by adding your food items and tracking their expiration dates!</p>
+    <a href="{{ url_for('add_item') }}" class="btn btn-primary">Get Started</a>
+  </div>
+  
+  <h3>Your Food Items</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Expiry Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in food_items %}
+        <tr>
+          <td>{{ item.name }}</td>
+          <td>{{ item.expiry_date }}</td>
+          <td>
+            <a href="{{ url_for('edit_item', item_id=item['_id']) }}">Edit</a>
+            <form method="POST" action="{{ url_for('delete_item', item_id=item['_id']) }}">
+              <button type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <a href="{{ url_for('add_item') }}" class="add-item-button">Add Item</a>
+  
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="alert alert-info">
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+{% endblock %}

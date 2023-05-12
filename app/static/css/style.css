@@ -1,0 +1,107 @@
+/* Add Food Waste Reduction Tracker-specific styles here */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+  margin: 20px;
+  padding: 0;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  background-image: url('/static/hunger.webp');
+  background-size: cover;
+  color: #fff;
+  padding: 200px;
+}
+
+
+h2 {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Awareness Section */
+.awareness-section {
+  margin-top: 50px;
+}
+
+/* Best Practices Section */
+.best-practices-section {
+  margin-top: 30px;
+}
+
+.best-practices-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Start Section */
+.start-section {
+  margin-top: 50px;
+}
+
+.start-section p {
+  margin-bottom: 20px;
+}
+
+/* Food Items Table */
+table {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table th {
+  background-color: #f2f2f2;
+}
+
+/* Flash Messages */
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.add-item-button {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* Adjust any other styles as needed */
