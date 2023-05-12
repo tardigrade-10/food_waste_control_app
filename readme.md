@@ -24,7 +24,3 @@ To use the Food Waste Reduction Tracker, follow these steps:
 Please note that while the provided code serves as a good starting point, it may contain potential errors. It is essential to review and test the code thoroughly to ensure proper functionality. Feel free to modify the code to fit your specific requirements and address any potential issues.
 
 Feel free to modify the file structure and customize the project to meet your specific needs.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
