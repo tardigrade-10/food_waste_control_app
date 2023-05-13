@@ -21,7 +21,7 @@ To use the Food Waste Reduction Tracker, follow these steps:
 
 1. Clone the repository from GitHub.
 2. Set up a virtual environment and install the required dependencies using `pip install -r requirements.txt`.
-3. Configure the application settings in the `config.py` file, including the MongoDB connection URI and the secret key.
+3. Configure the application env variables in the `.env.template` file, including the MongoDB connection URI and change the file name to `.env`.
 4. Run the application using the `run.py` file.
 5. Access the application through the provided URL, such as `http://localhost:5000/`.
 
